@@ -1,0 +1,23 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Maze 2023-04-09 17_12_30.wav-637b1b49393d3f6449d695600a2b9a5a.sample"
+
+[deps]
+
+source_file="res://Assets/Music/Maze 2023-04-09 17_12_30.wav"
+dest_files=[ "res://.import/Maze 2023-04-09 17_12_30.wav-637b1b49393d3f6449d695600a2b9a5a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0
