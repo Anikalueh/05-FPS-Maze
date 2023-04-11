@@ -7,11 +7,15 @@ var max_speed = 5
 var mouse_sensitivity = 0.002
 var mouse_range = 1.2
 
-var controlled = false
+export var score = 200
+var controlled = true
 
 var velocity = Vector3()
 
 var id = 0
+
+onready var rc = $Pivot/RayCast
+onready var flash = $Pivot/Blaster/Flash
 
 func get_input():
 	var input_dir = Vector3()
@@ -42,3 +46,11 @@ func _physics_process(delta):
 		velocity.x = desired_velocity.x
 		velocity.z = desired_velocity.z
 		velocity = move_and_slide(velocity, Vector3.UP, true)
+		
+		if Input.is_action_pressed("shoot"):	#and !flash.visible
+			flash.shoot()
+			if rc.is_colliding():
+				var c = rc.get_collider()
+				if c.is_in_group("Enemy"):
+					Global.increase_score(score)
+					c.queue_free()

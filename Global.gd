@@ -5,7 +5,11 @@ const SAVE_PATH = "res://settings.cfg"
 var save_file = ConfigFile.new()
 var inputs = ["left","right","forward","back"]
 
+var score = 0
 var menu = null
+
+func increase_score(s):
+	score += s
 
 func _ready():
 	pause_mode = Node.PAUSE_MODE_PROCESS
